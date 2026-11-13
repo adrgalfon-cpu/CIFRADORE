@@ -12,7 +12,7 @@ public class Main {
         texto.toLowerCase();
         int[] tCifradoNum = new int[texto.length()];
         for (int i = 0; i< tCifradoNum.length; i++){
-            tCifradoNum[i]=texto.charAt(i);
+            tCifradoNum[i]=(texto.charAt(i))+clave;
         }
         String[] tCifrado = new String[texto.length()];
         for (int i = 0; i<tCifrado.length;i++){
