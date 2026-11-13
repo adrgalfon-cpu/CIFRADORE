@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -5,12 +6,19 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        Cifrado(scanner.nextLine(), scanner.nextInt());
+        System.out.println(Arrays.toString(Cifrado(scanner.nextLine(), scanner.nextInt())));
     }
-    public static int Cifrado(String texto, int clave){
+    public static String[] Cifrado(String texto, int clave){
         texto.toLowerCase();
-        int[] tCifrao = new int[texto.length()];
-
+        int[] tCifradoNum = new int[texto.length()];
+        for (int i = 0; i< tCifradoNum.length; i++){
+            tCifradoNum[i]=texto.charAt(i);
+        }
+        String[] tCifrado = new String[texto.length()];
+        for (int i = 0; i<tCifrado.length;i++){
+            tCifrado[i]=ABC(tCifradoNum[i]);
+        }
+        return tCifrado;
     }
     public static String ABC(int a) {
         String pendiente = "";
