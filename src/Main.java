@@ -6,6 +6,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        System.out.println(ABC(104));
         System.out.println(Arrays.toString(Cifrado(scanner.nextLine(), scanner.nextInt())));
     }
     public static String[] Cifrado(String texto, int clave){
@@ -24,87 +25,87 @@ public class Main {
         String pendiente = "";
         if (a>=0 && a<=26) {
             switch (a) {
-                case 1:
+                case 0:
                     pendiente = "A";
                     break;
-                case 2:
+                case 1:
                     pendiente = "B";
                     break;
-                case 3:
+                case 2:
                     pendiente = "C";
                     break;
-                case 4:
+                case 3:
                     pendiente = "D";
                     break;
-                case 5:
+                case 4:
                     pendiente = "E";
                     break;
-                case 6:
+                case 5:
                     pendiente = "F";
                     break;
-                case 7:
+                case 6:
                     pendiente = "G";
                     break;
-                case 8:
+                case 7:
                     pendiente = "H";
                     break;
-                case 9:
+                case 8:
                     pendiente = "I";
                     break;
-                case 10:
+                case 9:
                     pendiente = "J";
                     break;
-                case 11:
+                case 10:
                     pendiente = "K";
                     break;
-                case 12:
+                case 11:
                     pendiente = "L";
                     break;
-                case 13:
+                case 12:
                     pendiente = "M";
                     break;
-                case 14:
+                case 13:
                     pendiente = "N";
                     break;
-                case 15:
+                case 14:
                     pendiente = "O";
                     break;
-                case 16:
+                case 15:
                     pendiente = "P";
                     break;
-                case 17:
+                case 16:
                     pendiente = "Q";
                     break;
-                case 18:
+                case 17:
                     pendiente = "R";
                     break;
-                case 19:
+                case 18:
                     pendiente = "S";
                     break;
-                case 20:
+                case 19:
                     pendiente = "T";
                     break;
-                case 21:
+                case 20:
                     pendiente = "U";
                     break;
-                case 22:
+                case 21:
                     pendiente = "V";
                     break;
-                case 23:
+                case 22:
                     pendiente = "W";
                     break;
-                case 24:
+                case 23:
                     pendiente = "X";
                     break;
-                case 25:
+                case 24:
                     pendiente = "Y";
                     break;
-                case 26:
+                case 25:
                     pendiente = "Z";
                     break;
             }
         } else{
-            pendiente = ABC(a%26) + (a/26);
+            pendiente = ABC((a%26)) + (a/26);
         }
         return pendiente;
     }
